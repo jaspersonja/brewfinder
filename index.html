@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Brewfinder</title>
 </head>
 <body>
-    <h1>Brewfinder</h1>
+    <header>
+       <h1>Brewfinder</h1> 
+    </header>
     
+    <main>
+        <div class="card">
+            <h3 class="card-header">Search Breweries by City</h3>
+            <form id="user-form" class="card-body">
+             <label class="form-label" for="username"></label>
+             <input id="city-search" type="text" class="form-input" />
+             <button type="submit" class="btn">Find Breweries</button>
+             </form>
+      </div>
+    </main>
+
+    <script src="./assets/script.js"></script>
 </body>
 </html>

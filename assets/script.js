@@ -6,7 +6,7 @@ fetch("http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=redmond%2Cwa&wp.1
 function handleSearch(event) {
     event.preventDefault();
 
-    var city = document.querySelector("#search-query").value;
+    var city = document.querySelector("#city-search").value;
 
     if (!city) {
         console.error("You need a city input value!");

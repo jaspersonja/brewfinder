@@ -1,0 +1,18 @@
+header {
+    width: 100%;
+    background-color: lightgray;
+    color: orangered;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.card {
+    padding-left: 10em;
+}
+
+.previous-search {
+    padding-left: 10em;
+}

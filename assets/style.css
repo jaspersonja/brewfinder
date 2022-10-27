@@ -8,11 +8,32 @@ header {
     text-align: center;
 }
 
-
-.card {
-    padding-left: 10em;
+h1 {
+    font-size: 180%;
 }
 
-.previous-search {
-    padding-left: 10em;
+h2 {
+    font-size: 140%;
 }
+
+.search {
+    padding-left: 15em;
+    width: 45em;
+    float: left;
+}
+
+.results {
+    padding-left: 30em;
+    width: 45em;
+    float: left;
+}
+
+/* #lbm-map {
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 50%;
+    color: #fff;
+    z-index: 100;
+  } */

@@ -1,5 +1,11 @@
+:root {
+    background-color: lightsalmon;
+}
+
+
 header {
     width: 100%;
+    font-family: 'Lobster', cursive;
     background-color: lightgray;
     color: orangered;
     padding-top: 20px;
@@ -9,11 +15,14 @@ header {
 }
 
 h1 {
-    font-size: 180%;
+    font-size: 90px;
 }
 
 h2 {
-    font-size: 140%;
+    font-size: 30px;
+    text-decoration: underline;
+    padding: 5px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .search {
@@ -22,10 +31,14 @@ h2 {
     float: left;
 }
 
+.card-body {
+    padding: 5px;
+    float: left;
+}
+
 .results {
     padding-left: 30em;
-    width: 45em;
-    float: left;
+    float: left;    
 }
 
 /* #lbm-map {
@@ -37,3 +50,9 @@ h2 {
     color: #fff;
     z-index: 100;
   } */
+
+  .custom-map {
+    position: relative;
+    top: 15em;
+    right: 15em;
+  }

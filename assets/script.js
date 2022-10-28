@@ -1,38 +1,42 @@
 var MapAPIKey = "Av5Fbku8ilvcyDQyVx6HKDgfQDxZLNbIa6wW02I16qHTK6lI6nSAGuxibjOTwe32"
-var cityInput = document.querySelector("#city-search")
-var searchButtonEl = document.querySelector("#city-search-btn")
+var cityInput = document.querySelector("#city-search");
+var searchButtonEl = document.querySelector("#city-search-btn");
 var citySearchHistory = document.querySelector("#search-history");
 
-var resultsEl = document.querySelector("results")
+var resultsEl = document.querySelector("#results")
+fetch("https://api.openbrewerydb.org/breweries?by_city=" + cityInput + "&per_page=5");
+fetch("http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=redmond%2Cwa&wp.1=Issaquah%2Cwa&key=" + MapAPIKey);
+let cityStorage = [];
 
 
-fetch("https://api.openbrewerydb.org/breweries?by_city=" + cityInput + "&per_page=5")
-fetch("http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=redmond%2Cwa&wp.1=Issaquah%2Cwa&key=" + MapAPIKey)
-var cityStorage = []
 
 function handleSearch(event) {
     event.preventDefault();
-    var city = document.querySelector("#city-search").value;
-    cityStorage.push(city);
-    console.log(cityStorage);
-    var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + city + "&limit=5&appid="
-    if (!city) {
+    var cityInputVal = cityInput.value.trim();
+
+    var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + cityInput + "&limit=5&appid="
+    if (!cityInput) {
         console.error("You need a city input value!");
         return;
-    }
+
+    } 
+    cityStorage.push(cityInputVal);
+    console.log(cityInputVal);
 
 
-    console.log(city)
     // getApi(queryURL);
     localStorage.setItem("results", JSON.stringify(cityStorage))
-    console.log(cityStorage.length)
-    renderButtons();
+
+    renderButtons(); 
+       console.log(cityStorage);
 }
 
 function loadDataFromLocalStorage() {
    var localStorageData = JSON.parse(localStorage.getItem("results"));
+if (localStorageData) {
+       cityStorage = localStorageData;
+}
 
-   cityStorage = localStorageData;
 
    renderButtons();
 
@@ -75,7 +79,6 @@ function getApi(queryURL) {
 loadDataFromLocalStorage();
 
 function renderButtons() {
-    let citySearchHistory = "0";
     citySearchHistory.innerHTML = ""; /// emptying order histories
     for (var i = 0; i < cityStorage.length; i++) {
         var searchHistory = document.createElement("button")

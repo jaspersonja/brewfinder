@@ -89,39 +89,7 @@ function renderButtons() {
 }
 searchButtonEl.addEventListener("click", handleSearch);
 
-function getApi(queryURL) {
 
-    fetch(queryURL)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-
-            for (var i = 0; i < data.length; i++){
-                console.log(data);
-                console.log(data[i].name);
-                var brewery = document.createElement('card');
-
-                var breweryName = document.createElement('h2');
-                breweryName.textContent = data[i].name;
-                brewery.appendChild(breweryName);
-
-                var breweryAddress = document.createElement('p');
-                breweryAddress.textContent = (data[i].street + "; " + data[i].city + ", " + data[i].state + " " + data[i].postal_code);
-                brewery.appendChild(breweryAddress);
-
-                var breweryURL = document.createElement('a');
-                breweryURL.textContent = data[i].website_url;
-                brewery.appendChild(breweryURL);
-
-                document.body.appendChild(brewery);
-
-
-            }
-
-        }); 
-
- }
 // window.onload = function() {
 //     var container = document.getElementById('lbm-map'),
 //       resize = function () { container.style.height = window.innerHeight + 'px'; };

@@ -1,0 +1,58 @@
+:root {
+    background-color: lightsalmon;
+}
+
+
+header {
+    width: 100%;
+    font-family: 'Lobster', cursive;
+    background-color: lightgray;
+    color: orangered;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+h2 {
+    font-size: 30px;
+    text-decoration: underline;
+    padding: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.search {
+    padding-left: 15em;
+    width: 45em;
+    float: left;
+}
+
+.card-body {
+    padding: 5px;
+    float: left;
+}
+
+.results {
+    padding-left: 30em;
+    float: left;    
+}
+
+/* #lbm-map {
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 50%;
+    color: #fff;
+    z-index: 100;
+  } */
+
+  .custom-map {
+    position: relative;
+    top: 15em;
+    right: 15em;
+  }

@@ -12,9 +12,9 @@ let cityStorage = [];
 
 function handleSearch(event) {
     event.preventDefault();
-    var cityInputVal = cityInput.value.trim();
+    var cityInputVal = document.querySelector("#city-search").value;
 
-    var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + cityInput + "&limit=5&appid="
+var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + cityInput.value + "&limit=5&appid=";
     if (!cityInput) {
         console.error("You need a city input value!");
         return;
@@ -24,11 +24,12 @@ function handleSearch(event) {
     console.log(cityInputVal);
 
 
-    // getApi(queryURL);
-    localStorage.setItem("results", JSON.stringify(cityStorage))
 
+    localStorage.setItem("results", JSON.stringify(cityStorage))
+ 
     renderButtons(); 
        console.log(cityStorage);
+    getApi(queryURL);  
 }
 
 function loadDataFromLocalStorage() {

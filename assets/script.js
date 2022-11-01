@@ -108,4 +108,54 @@ searchButtonEl.addEventListener("click", handleSearch);
 //     };
 //   };
 
+// Map Function to Display Default Map
+// key=AgD8bcWKAY7uUiODVrH_aXNAXGxwKYsGvySYcbKhk8nn_saT9XyOB7QtmNNJrMgL 
+var map;
+function loadMapScenario() {
+    map = new Microsoft.Maps.Map(document.getElementById('lbm-map'),{
+        credentials: 'AgD8bcWKAY7uUiODVrH_aXNAXGxwKYsGvySYcbKhk8nn_saT9XyOB7QtmNNJrMgL'
+    });
+    //Create Push Pin Icon
+    var pushpin = new Microsoft.Maps.Map.Pushpin(map.getCenter(),{});
+    map.entities.push(pushpin);
+};
+
+// Function to Show Search Results on Map (still working on this)
+   function Search() {
+      if(!handleSearch) {
+            Microsoft.Maps.loadModule('Microsoft.Maps.Search', function(){
+                handleSearch = new Microsoft.Maps.Search.handleSearch(map);
+              Search()
+            });
+       } else {
+            map.entities.clear();
+
+            var searchQuery = searchButtonEl.value;
+           geocodeQuery(searchQuery);
+        }
+   }
+   function geocodeQuery(searchQuery) {
+        var searchRequest = {
+           where: searchQuery,
+            callback: function (r) {
+                if (r && r.results && r.results.length > 0) {
+                   var pin, pins = [], locs = [], output = 'Results:<br/>';
+
+                   for (var i = 0; i < r.results.length; i++) {
+                      
+                    pin = new Microsoft.Maps.Pushpin(r.results[i].location, {
+                                                   text: i + ''
+                       });
+                      pins.push(pin);
+                      locs.push(r.results[i].location);
+
+                       output += i + ') ' + r.results[i].name + '<br/>';
+                    }
+                    map.entities.push(pins);
+           }
+       }
+   }
+   handleSearch.geocode(searchRequest);
+};
+
 

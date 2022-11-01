@@ -41,15 +41,14 @@ h2 {
     float: left;    
 }
 
-/* #lbm-map {
+ #lbm-map{
     display: inline-block;
     position: absolute;
-    top: 1em;
-    left: 1em;
-    width: 50%;
-    color: #fff;
-    z-index: 100;
-  } */
+    top:auto;
+    width: 500px;
+    height: 400px;
+    justify-content: right
+  } 
 
   .custom-map {
     position: relative;

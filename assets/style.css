@@ -36,22 +36,24 @@ h2 {
     float: left;
 }
 
-.results {
+.previous-search {
     padding-left: 30em;
     float: left;    
 }
 
+
  #lbm-map{
-    display: inline-block;
-    position: absolute;
-    top:auto;
+    /* display: inline-block; */
+    position: relative;
+    top: 15em;
+    left: 75em;
     width: 500px;
     height: 400px;
     justify-content: right
   } 
 
-  .custom-map {
+  /* .custom-map {
     position: relative;
     top: 15em;
     right: 15em;
-  }
+  } */

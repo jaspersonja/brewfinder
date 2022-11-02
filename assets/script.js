@@ -110,6 +110,7 @@ searchButtonEl.addEventListener("click", handleSearch);
 
 // Map Function to Display Default Map
 // key=AgD8bcWKAY7uUiODVrH_aXNAXGxwKYsGvySYcbKhk8nn_saT9XyOB7QtmNNJrMgL 
+
 var map;
 function loadMapScenario() {
     map = new Microsoft.Maps.Map(document.getElementById('lbm-map'),{

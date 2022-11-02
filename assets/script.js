@@ -90,7 +90,7 @@ function renderButtons() {
 }
 searchButtonEl.addEventListener("click", handleSearch);
 
-
+// Placeholder map
 // window.onload = function() {
 //     var container = document.getElementById('lbm-map'),
 //       resize = function () { container.style.height = window.innerHeight + 'px'; };

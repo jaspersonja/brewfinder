@@ -43,7 +43,6 @@ h2 {
 
 
  #lbm-map{
-    /* display: inline-block; */
     position: relative;
     top: 15em;
     left: 75em;
@@ -52,6 +51,7 @@ h2 {
     justify-content: right
   } 
 
+/* For placeholder map */
   /* .custom-map {
     position: relative;
     top: 15em;

@@ -13,8 +13,11 @@ N/A
 Brew Finder is a very easy to use website for any beer enthusiast. Just input the city you are wanting to find a brewery in and a list of breweries will populate for that city. The map will use push pins to show you the locations of the breweries in the city you searched for. The simplicity of Brew Finder means it is all about the beer and will help you find a great date night spot, your new favorite hang out or to check off a place on your brewery passport. 
 
 
+![brew finder site](./assets/images/brewfinder001.JPG)
+
 ## Link To Deployed Webpage:
 
+[Brew Finder Deployed Site](https://jaspersonja.github.io/brewfinder/)
 
 ## Future Development:
 
